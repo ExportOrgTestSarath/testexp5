@@ -1,0 +1,47 @@
+{
+	"name": "DELETE_BY_ID",
+	"description":"Delete by id",
+	"inputModelName":"",
+	"outputModelName":"",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "inputData":{
+                        "one":"EZu9HS5omm0F4QdbSid68HIJa",
+                        "two":"b7uOwRwAs11ne61iI4SRLktrn"
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/stables/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ],
+				            "lookupConfiguration":{
+             }
+		     }
+	       ],
+	"requestDetails":{
+			           "serviceType":"DELETE_BY_IDS",
+			           "method":"DELETE",
+			           "requestUrl":"/rest/stables/{ids}",
+			           "userName":"AppAdmin"		
+	       },
+	"deleteRecordInfo":[{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             }
+	       ],
+	"outputData": [
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":true,
+	"verificationRequestDetails":{
+			                        "method":"GET",
+			                        "requestUrl":"/rest/stables/{sid}",
+			                        "expectedResponseCode":204,
+			                        "userName":"AppAdmin"
+	       }
+}

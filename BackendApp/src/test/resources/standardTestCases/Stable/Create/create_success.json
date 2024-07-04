@@ -1,0 +1,41 @@
+{
+	"name": "CREATE_SUCCESS",
+	"description":"Create success",
+	"inputModelName":"com.vanenburgdemo.exapp.model.Stable",
+	"outputModelName":"com.vanenburgdemo.exapp.model.Stable",
+	"setUp":[
+	       ],
+	"requestDetails":{
+			           "serviceType":"CREATE",
+			           "inputData":{
+                        "one":"oXIuBRcUw8pLbMt0zUy4s8NyJ",
+                        "two":"Vb35UYkgCMPm7pA4aXt2S3My3"
+             },
+			           "method":"POST",
+			           "requestUrl":"/rest/stables/",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+			           "userName":"AppAdmin",
+			           "fileAttachmentInfo":[ 
+             ],
+			           "lookupConfiguration":{
+             }		
+	       },
+	"outputData": [{
+                        "one":"oXIuBRcUw8pLbMt0zUy4s8NyJ",
+                        "two":"Vb35UYkgCMPm7pA4aXt2S3My3"
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "Stable":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/stables/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

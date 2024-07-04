@@ -1,0 +1,51 @@
+{
+	"name": "READ_BY_ID",
+	"description":"Read by id",
+	"inputModelName":"com.vanenburgdemo.exapp.model.Stable",
+	"outputModelName":"com.vanenburgdemo.exapp.model.Stable",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "inputData":{
+                        "one":"cPrkyT61S8JPsXQxwpohOSwoJ",
+                        "two":"aFJEROKHMKT4oxwV3cltWasSd"
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/stables/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ],
+				            "lookupConfiguration":{
+             }
+		     }
+	       ],
+	"requestDetails":{
+			           "serviceType":"GET_BY_SID",
+			           "method":"GET",
+			           "requestUrl":"/rest/stables/{sid}",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+			           "userName":"AppAdmin"		
+	       },
+	"outputData": [{
+                        "one":"cPrkyT61S8JPsXQxwpohOSwoJ",
+                        "two":"aFJEROKHMKT4oxwV3cltWasSd"
+             }
+	       ],
+	"responseCode": 200,
+	"verifyUsingService":false,
+	"tearDown":{
+			     "Stable":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/stables/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}

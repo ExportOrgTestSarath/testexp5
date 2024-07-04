@@ -1,0 +1,59 @@
+{
+	"name": "CREATE_UNIQUE_VALUE_FAILURE",
+	"description":"Create unique value failure",
+	"inputModelName":"com.vanenburgdemo.exapp.model.Stable",
+	"outputModelName":"",
+	"setUp":[
+			   {
+				            "serviceType":"CREATE",
+				            "inputData":{
+                        "one":"e3UlPBYqqabAoRxFZoTyY8hdL",
+                        "two":"zLy4sn1rncETOM5YCU68njcwi"
+             },
+				            "method":"POST",
+				            "requestUrl":"/rest/stables/",
+				            "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+				            "userName":"AppAdmin",
+				            "fileAttachmentInfo":[ 
+             ],
+				            "lookupConfiguration":{
+             }
+		     }
+	       ],
+	"requestDetails":{
+			           "serviceType":"CREATE",
+			           "inputData":{
+                        "two":"QmIGvpVdzRC39ZeRZbEtr55i7",
+                        "one":"2fPomdTfTjv0ARIihgCgkOGs7"
+             },
+			           "method":"POST",
+			           "requestUrl":"/rest/stables/",
+			           "recordInfo":{
+                        "tableRecordNo":1,
+                        "tableName":"Stable"
+             },
+			           "userName":"AppAdmin",
+			           "fileAttachmentInfo":[ 
+             ],
+			           "lookupConfiguration":{
+             }		
+	       },
+	"responseCode": 400,
+	"errorMessage":{
+                     "STATUS_CODE":500,
+                     "ERROR_CODE":"ALREADY_EXISTS",
+                     "MESSAGE":"ALREADY_EXISTS"
+           },
+	"verifyUsingService":false,
+	"tearDown":{
+			     "Stable":{
+                        "method":"DELETE",
+                        "requestUrl":"/rest/stables/{ids}",
+                        "clearRecordsAfterTest":true,
+                        "userName":"AppAdmin"
+             }		
+	       }
+}
